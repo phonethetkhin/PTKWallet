@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PTK Wallet</string>
+    <string name="expense">Expense</string>
+    <string name="income">Income</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="enter_category">Enter Category</string>
+    <string name="enter_notes">Enter Notes</string>
+
+    <string-array name="transactionmethod">
+        <item>Cash</item>
+        <item>Card</item>
+    </string-array>
+</resources>
