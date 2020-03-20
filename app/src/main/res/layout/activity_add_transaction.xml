@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
     tools:context=".ui.AddTransactionActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilTransactionCategory"
         android:layout_width="match_parent"
-        android:layout_margin="8dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rdgTransactionType">
@@ -26,9 +28,9 @@
     <Spinner
         android:id="@+id/spnTransactionMethod"
         android:layout_width="match_parent"
-        android:layout_margin="8dp"
         android:entries="@array/transactionmethod"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +38,7 @@
     <RadioGroup
         android:id="@+id/rdgTransactionType"
         android:layout_width="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="16dp"
 
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -61,7 +63,8 @@
         android:id="@+id/tilTransactionAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="16dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilTransactionCategory">
@@ -69,6 +72,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tetTransactionAmount"
             android:layout_width="match_parent"
+            android:inputType="numberDecimal"
             android:layout_height="wrap_content"
             android:hint="@string/enter_amount" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -78,10 +82,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilTransactionAmount">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tetTransactionNotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_notes" />
@@ -89,17 +96,19 @@
 
     <ImageButton
         android:id="@+id/imbDate"
-        android:layout_margin="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilTransactionNotes"
        android:src="@drawable/ic_date_range_black_24dp" />
 <TextView
     android:id="@+id/txtDate"
     android:layout_width="match_parent"
-    android:text="TextView"
     android:textSize="20sp"
+    android:layout_margin="16dp"
+
     android:textStyle="bold"
     android:gravity="center"
     app:layout_constraintTop_toBottomOf="@+id/imbDate"
@@ -111,7 +120,9 @@
         android:layout_width="match_parent"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/add_transaction"
+        android:layout_margin="16dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDate" />

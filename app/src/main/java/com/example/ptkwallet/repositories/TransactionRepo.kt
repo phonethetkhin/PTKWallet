@@ -17,7 +17,12 @@ class TransactionRepo(val transactionDao: TransactionDao) {
     }
 
     suspend fun deleteTransaction(transactionEntity: TransactionEntity) {
-        transactionDao.deleteTransactio(transactionEntity)
+        transactionDao.deleteTransaction(transactionEntity)
     }
+    suspend fun deleteAllTransaction()
+    {
+        transactionDao.deleteAllTransactions()
+    }
+
 
 }

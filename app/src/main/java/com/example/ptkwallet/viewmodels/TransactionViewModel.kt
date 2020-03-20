@@ -20,9 +20,14 @@ class TransactionViewModel(application: Application) : AndroidViewModel(applicat
     fun updateTransaction(transactionEntity: TransactionEntity)=viewModelScope.launch {
         repository.updateTransaction(transactionEntity)
     }
-    fun deleteTransaction(transactionEntity: TransactionEntity)=viewModelScope.launch {
+     fun deleteTransaction(transactionEntity: TransactionEntity)=viewModelScope.launch {
         repository.deleteTransaction(transactionEntity)
     }
+    fun deleteAllTransaction()=viewModelScope.launch {
+        repository.deleteAllTransaction()
+    }
+
+
 
 
 

@@ -5,6 +5,7 @@
     <string name="enter_amount">Enter Amount</string>
     <string name="enter_category">Enter Category</string>
     <string name="enter_notes">Enter Notes</string>
+    <string name="add_transaction">Add Transaction</string>
 
     <string-array name="transactionmethod">
         <item>Cash</item>
